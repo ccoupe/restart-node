@@ -1,0 +1,10 @@
+[Unit]
+Description=Rebooter
+After=network-online.target
+
+[Service]
+ExecStart=/usr/local/lib/restart-node/restart-node.sh
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target

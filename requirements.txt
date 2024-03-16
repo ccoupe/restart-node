@@ -1,0 +1,4 @@
+typing_extensions
+paho-mqtt
+websocket-client
+websockets
