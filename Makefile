@@ -29,10 +29,10 @@ setup_dir:
 	sudo mkdir -p ${DESTDIR}/lib	
 	sudo cp ${SRCDIR}/lib/Settings.py ${DESTDIR}/lib
 	sudo cp ${SRCDIR}/restart-node.py ${DESTDIR}
-	sudo cp -a ${SRCDIR}/template.json ${DESTDIR}
-	sudo cp -a ${SRCDIR}/Makefile ${DESTDIR}
-	sudo cp -a ${SRCDIR}/requirements.txt ${DESTDIR}
-	sudo cp -a ${SRCDIR}/${SERVICE} ${DESTDIR}
+	sudo cp ${SRCDIR}/template.json ${DESTDIR}
+	sudo cp ${SRCDIR}/Makefile ${DESTDIR}
+	sudo cp ${SRCDIR}/requirements.txt ${DESTDIR}
+	sudo cp ${SRCDIR}/${SERVICE} ${DESTDIR}
 	sudo chown -R ${USER} ${DESTDIR}
 	sed  s!PYENV!${PYENV}! <${SRCDIR}/launch.sh >$(DESTDIR)/$(LAUNCH)
 	sudo chmod +x ${DESTDIR}/${LAUNCH}
