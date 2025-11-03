@@ -1,0 +1,9 @@
+{ "mqtt_server_ip": "192.168.1.3",
+  "mqtt_port": 1883,
+  "mqtt_client_name": "pinoir restarter",
+  "pub_topic": "network/status",
+  "reboot": "/sbin/reboot",
+  "pub_st_payload": ["pinoir has started"],
+  "pub_rb_payload": ["pinoir rebooting"],
+  "sub_topic": "network/control/set"
+}

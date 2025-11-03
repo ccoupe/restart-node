@@ -4,7 +4,10 @@ After=network-online.target
 
 [Service]
 ExecStart=/usr/local/lib/restart-node/restart-node.sh
-Restart=on-abort
+Restart=on-failure
+RestartSec=5
+StartLimitIntervalSec=5
+StartLimitBurst=10
 
 [Install]
 WantedBy=multi-user.target
